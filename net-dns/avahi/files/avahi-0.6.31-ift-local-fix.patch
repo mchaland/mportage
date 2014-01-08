@@ -1,0 +1,21 @@
+diff -ur avahi-0.6.31.old/avahi-core/iface-linux.c avahi-0.6.31/avahi-core/iface-linux.c
+--- avahi-0.6.31.old/avahi-core/iface-linux.c	2011-04-03 23:59:03.000000000 +0200
++++ avahi-0.6.31/avahi-core/iface-linux.c	2014-01-08 19:53:23.000000000 +0100
+@@ -204,7 +204,7 @@
+ 
+             switch(a->rta_type) {
+ 
+-                case IFA_ADDRESS:
++                case IFA_LOCAL:
+ 
+                     if ((rlocal.proto == AVAHI_PROTO_INET6 && RTA_PAYLOAD(a) != 16) ||
+                         (rlocal.proto == AVAHI_PROTO_INET && RTA_PAYLOAD(a) != 4))
+@@ -215,7 +215,7 @@
+ 
+                     break;
+ 
+-                case IFA_LOCAL:
++                case IFA_ADDRESS:
+ 
+                     /* Fill in local address data. Usually this is
+                      * preferable over IFA_ADDRESS if both are set,
