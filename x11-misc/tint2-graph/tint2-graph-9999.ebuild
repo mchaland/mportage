@@ -8,7 +8,7 @@ inherit cmake-utils eutils git-2
 
 DESCRIPTION="A lightweight panel/taskbar with graphics"
 HOMEPAGE="http://code.google.com/p/tint2/"
-EGIT_REPO_URI="https://github.com/mchaland/tint2.git"
+EGIT_REPO_URI="https://github.com/mchaland/tint2-graph.git"
 
 LICENSE="GPL-2"
 SLOT="0"
