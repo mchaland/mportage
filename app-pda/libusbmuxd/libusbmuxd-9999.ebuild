@@ -7,7 +7,7 @@ inherit eutils git-2
 
 DESCRIPTION="USB multiplex library for use with Apple iPhone/iPod Touch devices"
 HOMEPAGE="http://www.libimobiledevice.org/"
-EGIT_REPO_URI="https://github.com/libimobiledevice/libusbmuxd.git"
+EGIT_REPO_URI="https://github.com/mchaland/libusbmuxd.git"
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1"
 SLOT="0"
