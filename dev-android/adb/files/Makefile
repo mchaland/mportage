@@ -15,7 +15,6 @@ SRCS+= usb_linux.c
 SRCS+= usb_vendors.c
 
 VPATH+= ../libcutils
-SRCS+= list.c
 SRCS+= load_file.c
 SRCS+= socket_inaddr_any_server.c
 SRCS+= socket_local_client.c
@@ -32,6 +31,7 @@ CPPFLAGS+= -DADB_HOST=1
 CPPFLAGS+= -DADB_HOST_ON_TARGET=1
 CPPFLAGS+= -DHAVE_FORKEXEC=1
 CPPFLAGS+= -DHAVE_TERMIO_H=1
+CPPFLAGS+= -DHAVE_OFF64_T
 CPPFLAGS+= -Wno-unused-parameter
 CPPFLAGS+= -D_XOPEN_SOURCE
 CPPFLAGS+= -D_GNU_SOURCE
