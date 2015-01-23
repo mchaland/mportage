@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
+	epatch "${FILESDIR}/encfs-1.99999-fix-pod.patch"
 	eautoreconf
 }
 
