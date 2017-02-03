@@ -3,11 +3,13 @@
 # $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.4.ebuild,v 1.6 2012/10/31 23:14:20 flameeyes Exp $
 
 EAPI=2
-inherit subversion autotools eutils multilib
+inherit git-2 autotools eutils multilib
 
 DESCRIPTION="An implementation of encrypted filesystem in user-space using FUSE"
 HOMEPAGE="http://www.arg0.net/encfs/"
-ESVN_REPO_URI="http://encfs.googlecode.com/svn/branches/1.x"
+#ESVN_REPO_URI="http://encfs.googlecode.com/svn/branches/1.x"
+EGIT_REPO_URI="https://github.com/vgough/encfs.git"
+EGIT_BRANCH="1.x"
 
 LICENSE="GPL-3"
 SLOT="0"
