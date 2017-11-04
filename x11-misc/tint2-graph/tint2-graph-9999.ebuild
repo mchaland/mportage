@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.11-r1.ebuild,v 1.5 2012/09/11 17:38:41 idl0r Exp $
 
-EAPI="4"
+EAPI=6
 
-inherit cmake-utils eutils git-2
+inherit cmake-utils eutils git-r3
 
 DESCRIPTION="A lightweight panel/taskbar with graphics"
 HOMEPAGE="http://code.google.com/p/tint2/"
@@ -33,13 +33,14 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/gtk-icon-cache.sandbox.patch"
+	eapply_user
 }
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_enable battery BATTERY)
-		$(cmake-utils_use_enable examples EXAMPLES)
-		$(cmake-utils_use_enable tint2conf TINT2CONF)
+		-DENABLE_BATTERY="$(usex battery)"
+		-DENABLE_EXAMPLES="$(usex examples)"
+		-DENABLE_TINT2CONF="$(usex tint2conf)"
 
 		# bug 296890
 		"-DDOCDIR=/usr/share/doc/${PF}"
